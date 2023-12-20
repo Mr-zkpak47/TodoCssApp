@@ -1,5 +1,4 @@
 import Tag from "./Tag";
-import "./TaskForm.css";
 import { useState } from "react";
 import PropTypes from "prop-types";
 const TaskForm = ({ setTasks }) => {
@@ -46,7 +45,10 @@ const TaskForm = ({ setTasks }) => {
   };
   return (
     <header className="app_header flex items-center justify-center border border-[#dcdcdc]">
-      <form onSubmit={handleSubmit} className="w-2/5">
+      <form
+        onSubmit={handleSubmit}
+        className="form w-2/5 md:max-xl:w-3/5 md:max-lg:w-4/5"
+      >
         <input
           type="text"
           name="task"
@@ -56,7 +58,8 @@ const TaskForm = ({ setTasks }) => {
           onChange={handleChange}
         />
 
-        <div className="task_form_bottom_line flex items-center justify-between">
+        <div className="task_form_bottom_line flex items-center justify-between gap-x-0 md:max-md:flex-col">
+          <div className="task_form_flex">
             <Tag
               tagName="HTML"
               selectTag={selectTag}
@@ -77,6 +80,7 @@ const TaskForm = ({ setTasks }) => {
               selectTag={selectTag}
               selected={checkTag("React")}
             />
+          </div>
           <div className="flex justify-center items-center gap-x-2">
             <select
               name="status"
@@ -88,8 +92,11 @@ const TaskForm = ({ setTasks }) => {
               <option value="doing">Doing</option>
               <option value="done">Done</option>
             </select>
-            <button type="submit" className="bg-[#6457f9] text-white rounded-[5px] h-[40px] flex items-center justify-center px-[6px]">
-              + Add Task
+            <button
+              type="submit"
+              className="bg-[#6457f9] text-white rounded-[5px] h-[40px] flex items-center justify-center px-[6px]"
+            >
+              <span className="w-[100px]">+ Add Task</span>
             </button>
           </div>
         </div>

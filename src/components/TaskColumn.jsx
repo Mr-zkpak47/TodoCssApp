@@ -1,12 +1,11 @@
 import React from "react";
-import "./TaskColumn.css";
 import PropTypes from "prop-types";
 import TaskCard from "./TaskCard";
 const TaskColumn = ({ title, icon, tasks, status, handleDelete }) => {
   return (
     <React.Fragment>
       <section className="task-column w-[33.33%] m-5">
-        <h2 className="task_column_heading flex items-center">
+        <h2 className="task_column_heading flex items-center justify-center">
           <img
             className="task_column_icon w-[30px] mr-[5px]"
             src={icon}

@@ -1,4 +1,3 @@
-import "./App.css";
 import TaskColumn from "./components/TaskColumn";
 import TaskForm from "./components/TaskForm";
 import todoIcon from "./assets/direct-hit.png";
@@ -21,7 +20,7 @@ const App = () => {
   return (
     <div className="app grid grid-rows-[150px_auto]">
       <TaskForm setTasks={setTasks} />
-      <main className="app-main flex justify-evenly p-[20px_8%]">
+      <main className="app-main flex justify-evenly p-[20px_8%] items-baseline justify-center">
         <TaskColumn
           title="To do"
           icon={todoIcon}

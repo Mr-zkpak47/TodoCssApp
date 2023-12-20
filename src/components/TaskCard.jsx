@@ -1,11 +1,10 @@
-import "./TaskCard.css";
 import Tag from "./Tag.jsx";
 import deleteIcon from "../assets/delete.png";
 import PropTypes from "prop-types";
 const TaskCard = ({ title, tags, handleDelete, index }) => {
   return (
     <article className="task_card w-full min-h-[100px] border border-[#dcdcdc] rounded-[10px] p-[15px] m-[15px_0]">
-      <p className="task_text font-bold text-[18px] mb-[15px]">{title}</p>
+      <p className="task_text break-all font-bold text-[18px] mb-[15px]">{title}</p>
       <div className="task_card_bottom_line flex items-center justify-between">
         <div className="task_card_tags">
           {tags.map((tag, index) => {

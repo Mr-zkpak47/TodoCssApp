@@ -12,7 +12,12 @@ const Tag = ({ tagName, selectTag, selected }) => {
   };
   return (
     <React.Fragment>
-      <button type="button" className="tag" style={selected ? tagStyle[tagName] : tagStyle.default} onClick={() => selectTag(tagName)}>
+      <button
+        type="button"
+        className="tag text-[14px] font-medium bg-[#f9f9f9] border border-[#dfe3e6] rounded-[5px] p-[2px_10px] mr-[10px] cursor-pointer"
+        style={selected ? tagStyle[tagName] : tagStyle.default}
+        onClick={() => selectTag(tagName)}
+      >
         {tagName}
       </button>
     </React.Fragment>

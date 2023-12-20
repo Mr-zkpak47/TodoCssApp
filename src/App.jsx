@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 const oldTasks = localStorage.getItem("tasks");
 console.log(oldTasks);
 const App = () => {
-  const [tasks, setTasks] = useState(JSON.parse(oldTasks ) || []);
+  const [tasks, setTasks] = useState(JSON.parse(oldTasks) || []);
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -19,9 +19,9 @@ const App = () => {
     setTasks(newTasks);
   };
   return (
-    <div className="app">
+    <div className="app grid grid-rows-[150px_auto]">
       <TaskForm setTasks={setTasks} />
-      <main className="app-main">
+      <main className="app-main flex justify-evenly p-[20px_8%]">
         <TaskColumn
           title="To do"
           icon={todoIcon}

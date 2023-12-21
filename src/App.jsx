@@ -6,7 +6,6 @@ import doneIcon from "./assets/check-mark-button.png";
 import { useState, useEffect } from "react";
 
 const oldTasks = localStorage.getItem("tasks");
-console.log(oldTasks);
 const App = () => {
   const [tasks, setTasks] = useState(JSON.parse(oldTasks) || []);
 
